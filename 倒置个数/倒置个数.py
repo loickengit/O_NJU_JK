@@ -8,7 +8,7 @@ def mergeSort(nums):
     cl, l = mergeSort(nums[:mid])
     cr, r = mergeSort(nums[mid:])
     for i in range(len(nums)):
-        if not r or l and l[0] < r[0]:
+        if not r or l and l[0] <= r[0]:
             nums[i] = l.pop(0)
         else:
             nums[i] = r.pop(0)
